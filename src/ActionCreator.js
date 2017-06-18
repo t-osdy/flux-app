@@ -6,4 +6,8 @@ export default class ActionCreator {
   countUp(data) {
     this.dispatcher.emit("countUp", data);
   }
+
+  countDown(data) {
+    this.dispatcher.emit("countDown", data);
+  }
 }

@@ -20,14 +20,19 @@ export default class App extends React.Component {
     this.setState({count: store.getCount()})
   }
 
-  tick(){
+  up(){
     action.countUp(this.state.count + 1)
+  }
+
+  down(){
+    action.countDown(this.state.count - 1)
   }
 
   render() {
     return (
       <div>
-         <button onClick={this.tick.bind(this)}>Count Up</button>
+         <button onClick={this.up.bind(this)}>Count Up</button>
+         <button onClick={this.down.bind(this)}>Count Up</button>
         <p>
           Count: {this.state.count}
         </p>

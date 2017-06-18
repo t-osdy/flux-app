@@ -6,6 +6,7 @@ export default class Store extends Emitter {
     this.count = 0
     // observe event
     dispatcher.on("countUp", this.onCountUp.bind(this))
+    dispatcher.on("countDown", this.onCountDown.bind(this))
   }
 
   getCount(){
@@ -13,6 +14,14 @@ export default class Store extends Emitter {
   }
 
   onCountUp(count) {
+    if(this.count === count){
+      return
+    }
+    this.count = count
+    this.emit("CHANGE")
+  }
+
+  onCountDown(count) {
     if(this.count === count){
       return
     }

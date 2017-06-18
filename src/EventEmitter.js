@@ -18,14 +18,4 @@ export default class EventEmitter {
     }
   }
 
-  //あとで考える
-  // off(type, handler) {
-  //   var handlers = this._handlers[type] || [];
-  //   for (var i = 0; i < handlers.length; i++) {
-  //     var ownHandler = handlers[i];
-  //     if (ownHandler === handler) {
-  //         handlers.splice(i, 1);
-  //     }
-  //   }
-  // }
 }
